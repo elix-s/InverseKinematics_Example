@@ -11,14 +11,14 @@ public class IKController : MonoBehaviour
     
     private bool _boxIsCaptured = false;
     
-    private const float MaxBoxWeight = 10f; 
+    private const float MaxBoxWeight = 5f; 
 
     private void Awake()
     {
         _boxRigidbody.mass = _boxWeight;
     }
 
-    void OnAnimatorIK(int layerIndex)
+    private void OnAnimatorIK(int layerIndex)
     {
         if (_boxIsCaptured)
         {
@@ -55,6 +55,6 @@ public class IKController : MonoBehaviour
         _boxIsCaptured = false;
         _boxTransform.transform.SetParent(null);
         _boxRigidbody.isKinematic = false;
-        _boxRigidbody.AddForce(_handRight.right * MaxBoxWeight/_boxWeight, ForceMode.VelocityChange); 
+        _boxRigidbody.AddForce(_handRight.right * (MaxBoxWeight/_boxWeight * 2), ForceMode.VelocityChange); 
     }
 }

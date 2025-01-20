@@ -855,7 +855,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934118371}
   serializedVersion: 4
-  m_Mass: 0.0000001
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -898,7 +898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 1943245143}
   _boxTransform: {fileID: 1934118372}
-  _boxWeight: 2
+  _boxWeight: 1
   _boxRigidbody: {fileID: 1934118376}
   _handRight: {fileID: 1638675007}
   _handLeft: {fileID: 293136172}
